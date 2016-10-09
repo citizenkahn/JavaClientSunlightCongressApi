@@ -1,0 +1,50 @@
+{
+  "results": [
+    {
+      "bioguide_id": "W000817",
+      "birthday": "1949-06-22",
+      "chamber": "senate",
+      "contact_form": "http://www.warren.senate.gov/?p=email_senator#thisForm",
+      "crp_id": "N00033492",
+      "district": null,
+      "facebook_id": "131559043673264",
+      "fax": null,
+      "fec_ids": [
+        "S2MA00170"
+      ],
+      "first_name": "Elizabeth",
+      "gender": "F",
+      "govtrack_id": "412542",
+      "icpsr_id": 41301,
+      "in_office": true,
+      "last_name": "Warren",
+      "lis_id": "S366",
+      "middle_name": null,
+      "name_suffix": null,
+      "nickname": null,
+      "oc_email": "Sen.Warren@opencongress.org",
+      "ocd_id": "ocd-division/country:us/state:ma",
+      "office": "317 Hart Senate Office Building",
+      "party": "D",
+      "phone": "202-224-4543",
+      "senate_class": 1,
+      "state": "MA",
+      "state_name": "Massachusetts",
+      "state_rank": "senior",
+      "term_end": "2019-01-03",
+      "term_start": "2013-01-03",
+      "thomas_id": "02182",
+      "title": "Sen",
+      "twitter_id": "SenWarren",
+      "votesmart_id": 141272,
+      "website": "http://www.warren.senate.gov",
+      "youtube_id": "senelizabethwarren"
+    }
+  ],
+  "count": 1,
+  "page": {
+    "count": 1,
+    "per_page": 20,
+    "page": 1
+  }
+}
