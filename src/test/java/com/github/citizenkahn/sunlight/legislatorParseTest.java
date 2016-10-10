@@ -8,6 +8,7 @@ import java.io.IOException;
 import static org.junit.Assert.*;
 
 /**
+ * Test for Legislator access object
  * Created by pkahn on 10/9/2016.
  */
 public class legislatorParseTest extends TestBase {
@@ -17,5 +18,6 @@ public class legislatorParseTest extends TestBase {
         Legislator legislator = Legislator.createFromFile(jsonFile);
 
         assertEquals("Elizabeth", legislator.getFirstName());
+        assertTrue(legislator.isInOffice());
     }
 }

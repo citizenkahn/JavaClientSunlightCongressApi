@@ -2,13 +2,17 @@ package com.github.citizenkahn.sunlight;
 
 import com.google.gson.Gson;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Scanner;
 
 /**
+ * Data Access Object for Legislator Sunglight Congress API v3
  * Created by pkahn on 10/9/2016.
  */
 public class Legislator {
@@ -21,6 +25,9 @@ public class Legislator {
     private String first_name;
     private String gender;
     private String last_name;
+    private String govtrack_id;
+    private boolean in_office;
+    private String name_suffix;
 
     public Legislator() {}
 
@@ -28,11 +35,11 @@ public class Legislator {
      * Create Legislator instrance from file
      * @param jsonFile file containing json text
      * @return Legislator object
-     * @throws IOException
+     * @throws IOException on file access
      */
     public static Legislator createFromFile(File jsonFile) throws IOException {
-        byte [] encoded = Files.readAllBytes(jsonFile.toPath());
-        return Legislator.crateFromJson(new String(encoded, Charset.defaultCharset()));
+        String content = new Scanner(jsonFile).useDelimiter("\\Z").next();
+        return Legislator.crateFromJson(content);
     }
 
     /**
@@ -42,12 +49,15 @@ public class Legislator {
      */
     public static Legislator crateFromJson(String json) {
         Gson gson = new Gson();
-        Legislator legislator = gson.fromJson(json, Legislator.class);
-        return legislator;
+        return gson.fromJson(json, Legislator.class);
 
     }
 
     public String getFirstName() {
         return first_name;
+    }
+
+    public boolean isInOffice() {
+        return in_office;
     }
 }
